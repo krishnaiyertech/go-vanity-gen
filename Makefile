@@ -9,11 +9,6 @@ GVG_PACKAGE="krishnaiyer.tech/golang/go-vanity-gen"
 
 .PHONY: init
 
-go.lint:
-	${GO_LINT} run
-
-	.PHONY: build
-
 init:
 	@echo "Initialise repository..."
 	@mkdir -p gen
@@ -34,3 +29,6 @@ clean:
 	@rm -rf dist
 	@rm -rf gen
 	@mkdir -p gen
+
+lint:
+	${GO_LINT} run

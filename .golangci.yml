@@ -40,6 +40,12 @@ linters:
     - varnamelen
     - whitespace
     - wrapcheck
+  exclusions:
+    rules:
+      - path: '(.+)_test\.go'
+        linters:
+          - lll
+          - varnamelen
 
 linters-settings:
   godot:
