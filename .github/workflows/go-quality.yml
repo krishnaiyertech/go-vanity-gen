@@ -1,0 +1,23 @@
+name: check-go-quality
+on:
+  push:
+    paths:
+      - "**.go"
+
+jobs:
+  check-quality:
+    name: buildandtest
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Go 1.25
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.25"
+      - name: Check out code
+        uses: actions/checkout@v5
+      - name: Build
+        run: make build.local
+      - name: Lint
+        run: make lint
+      - name: Run package tests
+        run: make test

@@ -37,7 +37,7 @@ Use "go-vanity-gen [command] --help" for more information about a command.
 1. Install
 
 ```bash
-$ go install krishnaiyer.nl/golang/go-vanity-gen
+$ go install krishnaiyer.tech/golang/go-vanity-gen
 ```
 
 2. Generate

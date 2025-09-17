@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Welcome to {{.Host}}</h1>
+<ul>
+{{range .Vanity}}<li><a href="https://pkg.go.dev/{{.Path}}">{{.Path}}</a></li>{{end}}
+</ul>
+</body>
+</html>
