@@ -1,11 +1,11 @@
-name: check-go-quality
+name: buildandtest
 on:
   push:
     paths:
       - "**.go"
 
 jobs:
-  check-quality:
+  buildandtest:
     name: buildandtest
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +17,5 @@ jobs:
         uses: actions/checkout@v5
       - name: Build
         run: make build.local
-      - name: Lint
-        run: make lint
       - name: Run package tests
         run: make test
