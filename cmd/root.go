@@ -40,7 +40,7 @@ var (
 		SilenceErrors: true,
 		SilenceUsage:  true,
 		Short:         "go-vanity generates vanity assets from templates",
-		Long:          `go-vanity generates vanity assets from templates. Templates are usually simple html files that contain links to repositories`,
+		Long:          `go-vanity generates vanity assets from templates. Templates are usually simple html files that contain links to repositories.`,
 		Run: func(cmd *cobra.Command, args []string) {
 			baseCtx := context.Background()
 			ctx, cancel := context.WithCancel(baseCtx)

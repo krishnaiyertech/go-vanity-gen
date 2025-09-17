@@ -3,3 +3,11 @@
 
 // Package main is the main entry point.
 package main
+
+import (
+	"krishnaiyer.tech/golang/go-vanity-gen/cmd"
+)
+
+func main() {
+	cmd.Execute()
+}
