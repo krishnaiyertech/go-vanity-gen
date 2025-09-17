@@ -17,7 +17,6 @@ builds:
     goos:
       - darwin
       - linux
-      - windows
     goarch:
       - "386"
       - amd64
@@ -36,21 +35,12 @@ archives:
       - LICENSES/Apache-2.0.txt
       - README.md
     formats: [tar.gz]
-  - id: zip
-    ids:
-      - go-vanity-gen
-    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
-    files:
-      - LICENSES/Apache-2.0.txt
-      - README.md
-    wrap_in_directory: true
-    formats: [zip]
 
 checksum:
   name_template: "checksums.txt"
 
 snapshot:
-  name_template: "{{ .Tag }}-dev"
+  version_template: "{{ .Tag }}-dev"
 
 changelog:
   sort: asc
