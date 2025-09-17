@@ -29,22 +29,22 @@ builds:
 
 archives:
   - id: tar
-    builds:
+    ids:
       - go-vanity-gen
     name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
     files:
-      - LICENSE
+      - LICENSES/Apache-2.0.txt
       - README.md
-    format: tar.gz
+    formats: [tar.gz]
   - id: zip
-    builds:
+    ids:
       - go-vanity-gen
     name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
     files:
-      - LICENSE
+      - LICENSES/Apache-2.0.txt
       - README.md
     wrap_in_directory: true
-    format: zip
+    formats: [zip]
 
 checksum:
   name_template: "checksums.txt"
