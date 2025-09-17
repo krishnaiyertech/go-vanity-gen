@@ -22,9 +22,6 @@ builds:
       - amd64
       - arm
       - arm64
-    goarm:
-      - "6"
-      - "7"
 
 archives:
   - id: tar
@@ -34,6 +31,7 @@ archives:
     files:
       - LICENSES/Apache-2.0.txt
       - README.md
+      - CHANGELOG.md
     formats: [tar.gz]
 
 checksum:
