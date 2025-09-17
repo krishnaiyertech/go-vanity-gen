@@ -1,0 +1,69 @@
+version: "2"
+
+run:
+  relative-path-mode: wd
+
+linters:
+  enable:
+    - asciicheck
+    - errname
+    - errorlint
+    - exhaustive
+    - exptostd
+    - fatcontext
+    - gocritic
+    - godot
+    - goheader
+    - gomodguard
+    - gosec
+    - intrange
+    - lll
+    - loggercheck
+    - nilnil
+    - noctx
+    - nolintlint
+    - paralleltest
+    - prealloc
+    - predeclared
+    - protogetter
+    - revive
+    - rowserrcheck
+    - sloglint
+    - spancheck
+    - sqlclosecheck
+    - staticcheck
+    - tagalign
+    - testifylint
+    - unconvert
+    - unparam
+    - unused
+    - varnamelen
+    - whitespace
+    - wrapcheck
+
+linters-settings:
+  godot:
+    capital: true
+    period: true
+  lll:
+    line-length: 120
+    tab-width: 2
+  gosec:
+    excludes:
+      - G404 # Insecure random number source (rand)
+  goheader:
+    values:
+      const:
+        AUTHOR: "Krishna Iyer"
+        WEBSITE: "www.krishnaiyer.tech"
+      regexp:
+        YEAR: 20\d\d
+    template: |-
+      SPDX-FileCopyrightText: Copyright {{ YEAR }} {{ AUTHOR }} <{{ WEBSITE }}>
+      SPDX-License-Identifier: Apache-2.0
+  exhaustive:
+    default-signifies-exhaustive: true
+  varnamelen:
+    ignore-names:
+      - a
+      - b
