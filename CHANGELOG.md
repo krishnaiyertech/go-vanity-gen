@@ -12,6 +12,12 @@ This file contains a list of changes per version.
 
 ### Security
 
+## [1.0.0] - 2025-09-18
+
+### Added
+
+- First official release
+
 ## [0.0.1] - 2025-09-17
 
 ### Added
